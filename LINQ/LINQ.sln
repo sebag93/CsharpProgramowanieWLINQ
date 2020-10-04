@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2_Funkcje", "2_Funkcje\2_Fu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3_Zapytania", "3_Zapytania\3_Zapytania.csproj", "{046785E9-ADBD-40F8-902F-BE9007F2EE07}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samochody", "Samochody\Samochody.csproj", "{5FBFC5FB-9C01-41BB-929D-AFF0BACBF865}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{046785E9-ADBD-40F8-902F-BE9007F2EE07}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{046785E9-ADBD-40F8-902F-BE9007F2EE07}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{046785E9-ADBD-40F8-902F-BE9007F2EE07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FBFC5FB-9C01-41BB-929D-AFF0BACBF865}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FBFC5FB-9C01-41BB-929D-AFF0BACBF865}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FBFC5FB-9C01-41BB-929D-AFF0BACBF865}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FBFC5FB-9C01-41BB-929D-AFF0BACBF865}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
