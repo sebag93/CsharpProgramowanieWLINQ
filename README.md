@@ -22,7 +22,7 @@ Kurs C# - programowanie w LINQ
   3.3. Odroczone wykonanie
   3.4. Objaœnienie odroczonego wykonania
   3.5. Wykorzystanie odroczonego wykonania
-  3.6. Unikanie pu³ape odroczonego wykonania
+  3.6. Unikanie pu³apek odroczonego wykonania
   3.7. Wyj¹tki i odroczone zapytania
   3.8. Operatory strumieniowe
   3.9. Zapytanie o nieskoñczonoœc
