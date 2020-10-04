@@ -20,11 +20,16 @@ namespace _3_Zapytania
                 new Film { Tytul = "Gladiator", Gatunek="Dramat", Ocena = 8.1f, Rok = 2000}
             };
 
-            var zapytanie = filmy.Filtr(f => f.Rok > 2002);
+            var zapytanie = filmy.Filtr(f => f.Rok > 2002).Take(1);
 
-            foreach (var film in zapytanie)
+            // pozniej
+            zapytanie = zapytanie.Take(1);
+
+            var enumerator = zapytanie.GetEnumerator();
+
+            while (enumerator.MoveNext())
             {
-                Console.WriteLine(film.Tytul);
+                Console.WriteLine(enumerator.Current.Tytul);
             }
         }
     }
