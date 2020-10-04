@@ -25,7 +25,7 @@ Kurs C# - programowanie w LINQ
   3.6. Unikanie pu³apek odroczonego wykonania
   3.7. Wyj¹tki i odroczone zapytania
   3.8. Operatory strumieniowe
-  3.9. Zapytanie o nieskoñczonoœc
+  3.9. Zapytanie o nieskoñczonoœæ
   3.10. Podsumowanie
 4. Filtrowanie, sortowanie, wyœwietlanie
   4.1. Wprowadzenie
