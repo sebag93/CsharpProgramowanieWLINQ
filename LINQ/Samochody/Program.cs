@@ -39,21 +39,31 @@ namespace Samochody
             var db = new SamochodDB();
             db.Database.Log = Console.WriteLine;
             var zapytanie = from samochod in db.Samochody
-                            orderby samochod.SpalanieAutostrada descending, samochod.Model ascending
-                            select samochod;
+                            group samochod by samochod.Producent into producent
+                            select new
+                            {
+                                Model = producent.Key,
+                                Samochody = (from samochod in producent
+                                            orderby samochod.SpalanieAutostrada descending
+                                            select samochod).Take(2)
+                            };
 
-            var zapytanie2 = db.Samochody.Where(s => s.Producent == "Audi")
-                                         .OrderByDescending(s => s.SpalanieAutostrada)
-                                         .ThenBy(s => s.Model)
-                                         .Take(10)
-                                         .ToList();
+            var zapytanie2 = db.Samochody.GroupBy(s => s.Producent)
+                                         .Select(g => new
+                                         {
+                                             Model = g.Key,
+                                             Samochody = g.OrderByDescending(s => s.SpalanieAutostrada).Take(2)
+                                         });
 
-            Console.WriteLine(zapytanie2.Count());
-
-            foreach (var samochod in zapytanie2)
+            foreach (var grupa in zapytanie)
             {
-                Console.WriteLine($"{samochod.Model} : {samochod.SpalanieAutostrada}");
-            }
+                Console.WriteLine(grupa.Model);
+
+                foreach (var samochod in grupa.Samochody)
+                {
+                    Console.WriteLine($"\t{samochod.Model} : {samochod.SpalanieAutostrada}");
+                }
+            }  
         }
 
         private static void ZapytanieXML()
