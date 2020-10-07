@@ -43,7 +43,12 @@ namespace Samochody
                             select samochod;
 
             var zapytanie2 = db.Samochody.Where(s => s.Producent == "Audi")
-                                         .OrderByDescending(s => s.SpalanieAutostrada).ThenBy(s => s.Model).Take(10);
+                                         .OrderByDescending(s => s.SpalanieAutostrada)
+                                         .ThenBy(s => s.Model)
+                                         .Take(10)
+                                         .ToList();
+
+            Console.WriteLine(zapytanie2.Count());
 
             foreach (var samochod in zapytanie2)
             {
